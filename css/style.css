@@ -136,3 +136,7 @@ h1, h2 {
   transform: scale(0.98);
 }
 
+.flash {
+  background: white !important;
+  box-shadow: 0 0 30px white;
+}

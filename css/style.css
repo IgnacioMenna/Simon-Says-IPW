@@ -53,3 +53,86 @@ h1, h2 {
 .blue {
   background: linear-gradient(to bottom, #66b3ff, #004080);
 }
+
+.main-nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ccc;
+}
+
+#start-screen h1, p{
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.name-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#player-name {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 200px;
+  text-align: center;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+#player-name:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px #66ff66;
+}
+
+#error-msg {
+  color: red;
+  display: none;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+#start-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+  background-color: #66ff66;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#start-btn:hover {
+  background-color: #33cc33;
+  transform: scale(1.05);
+}
+
+#start-btn:active {
+  background-color: #28a428;
+  transform: scale(0.98);
+}
+

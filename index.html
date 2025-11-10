@@ -11,6 +11,19 @@
 <body>
     <h1>Simon Says Game</h1>
 
+    <nav class="main-nav">
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div id="start-screen">
+        <div class="name-input-container">
+            <h1>Enter your name:</h1>
+            <input type="text" id="player-name" placeholder="Your name" />
+        </div>
+        <p id="error-msg" class="error-msg">Please enter a valid name (min. 3 characters).</p>
+        <button id="start-btn" type="button">Start Game</button>
+    </div>
+    
     <div class="btn-container">
         <div class="row">
             <button class="btn red" id="red" type="button">1</button>

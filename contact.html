@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simon Says Game - Contact</title>
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <form id="contact-form" novalidate>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" />
+    <div class="error" id="error-name">The name must be at least 3 characters long and contain only letters and numbers.</div>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" />
+    <div class="error" id="error-email">Please enter a valid email address.</div>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    <div class="error" id="error-message">The message must be longer than 5 characters.</div>
+
+    <button type="submit">Send</button>
+  </form>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  function showError(id) {
+    document.getElementById('error-' + id).style.display = 'block';
+  }
+
+  function hideError(id) {
+    document.getElementById('error-' + id).style.display = 'none';
+  }
+
+  function validateName(name) {
+    return /^[a-zA-Z0-9\s]{3,}$/.test(name.trim());
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  }
+
+  function validateMessage(msg) {
+    return msg.trim().length > 5;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    let valid = true;
+
+    if (!validateName(name)) {
+      showError('name');
+      valid = false;
+    } else {
+      hideError('name');
+    }
+
+    if (!validateEmail(email)) {
+      showError('email');
+      valid = false;
+    } else {
+      hideError('email');
+    }
+
+    if (!validateMessage(message)) {
+      showError('message');
+      valid = false;
+    } else {
+      hideError('message');
+    }
+
+    if (valid) {
+      const subject = encodeURIComponent("Contact from Simon Says");
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+
+  });
+</script>
+
+</body>
+</html>

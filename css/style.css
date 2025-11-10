@@ -73,7 +73,7 @@ h1, h2 {
   color: #ccc;
 }
 
-#start-screen h1, p{
+#start-screen{
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   font-size: 1.5rem;
@@ -109,8 +109,7 @@ h1, h2 {
 #error-msg {
   color: red;
   display: none;
-  font-size: 0.9rem;
-  margin-top: 8px;
+  font-size: 1.1rem;
 }
 
 #start-btn {
@@ -197,8 +196,9 @@ h1, h2 {
 }
 
 #game-over-modal,
-#game-over-modal * {
-  color: black !important;
+#game-over-modal h2,
+#game-over-modal p {
+  color: #000;
 }
 
 footer {
@@ -218,4 +218,53 @@ footer a {
 
 footer a:hover {
   color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #start-btn,
+  #restart-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 10px;
+  }
+
+  .main-nav {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  #player-name {
+    width: 160px;
+    font-size: 0.9rem;
+  }
+
+  .name-input-container {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }

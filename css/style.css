@@ -9,3 +9,47 @@ body {
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
 }
+
+h1, h2 {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 25%;
+  border: 6px solid #222;
+  margin: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.red {
+  background: linear-gradient(to bottom, #ff4d4d, #b30000);
+}
+
+.yellow {
+  background: linear-gradient(to bottom, #ffff66, #cccc00);
+}
+
+.green {
+  background: linear-gradient(to bottom, #66ff66, #009933);
+}
+
+.blue {
+  background: linear-gradient(to bottom, #66b3ff, #004080);
+}
